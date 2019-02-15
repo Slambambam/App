@@ -9,11 +9,9 @@ const app = express()
 app.use(morgan('combined'))
 app.use(bodyParser.json())
 app.use(cors())
-app.post('/register', (req, res) => {
-  res.send({
-    message: `Hello ${req.body.email} ! Your email was registered! Have fun!`
-  })
-})
+
+require('./routes')(app)
+
 app.post('/services', (req, res) => {
   res.send({
     message: 'Services API'

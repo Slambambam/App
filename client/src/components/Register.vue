@@ -33,7 +33,7 @@ export default {
     }
   },
   methods: {
-      async register () {
+      async Register () {
         const reposnse = await AuthenticationService.register({
             email: this.email,
             password: this.password
